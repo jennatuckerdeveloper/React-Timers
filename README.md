@@ -68,3 +68,26 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Compoment Tree Sketch Design Notes 
+
+Timers 
+- State Timers = Array Of Timer Objects 
+- Timer values:  unique id, title, project, time elapsed, runningSince 
+- By using a running since, a basic calcuation can allow timers to "run" when app is off 
+
+Timer 
+- Title 
+- Project 
+- Running Timer Display 
+- Delete Timer 
+- Edit Timer Button [Opens Add/Edit Timer Form in place of Timer]
+- Stop/Start Timer Button 
+
+Add Timer Button [Opens Add/Edit Timer in place of + button]
+
+Add/Edit Timer Form 
+- Title Input 
+- Project Input 
+- Add/Update Button 
+- Cancel Button 
