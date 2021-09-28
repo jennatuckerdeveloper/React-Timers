@@ -2,8 +2,10 @@ import React from 'react'
 
 export const App = () => {
   return (
-    <div>
-
+    <div className="ui centered card">
+      hello
     </div>
   )
 }
+
+export default App
