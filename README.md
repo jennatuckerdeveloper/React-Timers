@@ -72,7 +72,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 # Compoment Tree Sketch Design Notes 
 
 Timers 
-- State Array 
+- State Timers = Array Of Timer Objects 
+- Timer values:  unique id, title, project, time elapsed, runningSince 
+- By using a running since, a basic calcuation can allow timers to "run" when app is off 
 
 Timer 
 - Title 
