@@ -1,7 +1,7 @@
 {
   "timers": [
     {
-      "title": "new title ",
+      "title": "new title",
       "project": "new project",
       "elapsed": 0,
       "runningSince": null,
