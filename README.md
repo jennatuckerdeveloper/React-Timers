@@ -1,93 +1,27 @@
-# Getting Started with Create React App
+#Run React Timers App On Local 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1) Clone the Github repo to a local folder. 
+2) From the folder, run `npm install`. 
+3) To set up a proper development environment to work with the code, run:
 
-## Available Scripts
+`npm install eslint --save-dev
+npm install eslint-config-standard --save-dev
+npm install eslint-config-standard-jsx --save-dev
+npm install eslint-plugin-react --save-dev
+npm install eslint-plugin-import --save-dev
+npm install eslint-plugin-node --save-dev
+npm install eslint-plugin-promise --save-dev
+npm install eslint-plugin-standard --save-dev`
 
-In the project directory, you can run:
+4) In a terminal window run `npm run start` to run the React app in your browser on the local development server at `http://localhost:3000`.
+5) In another terminal window run `npm run server` to run the json-server stand-in REST API. 
 
-### `npm start`
+#Notes For Learning With This App
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1) The "backend" data object can be inspected in the `db.json` file, including changes, and can also be seen at`http://localhost:7000/timers` in your browser.  
+2) This app was created using Create React App. 
+3) This app was created based on a project in the excellent book `Fullstack React: The Complete Guide to ReactJS and Friends` by Anthony Accomazzo, Nate Murray, Ari Lerner, Clay Allsopp, David Guttman, and Tyler McGinnis [https://www.newline.co/fullstack-react/].  
+4) For an excellent intro to React function components using hooks, see Brad Traversy's tutorial on YouTube channel Traversy Media, the `React Crash Course 2021` [https://www.youtube.com/watch?v=w7ejDZ8SWv8].  
+5) For an excellent explanation of the `userReducer` React hook, see the article `Examples of the useReducer Hook` by Dave Ceddia [https://daveceddia.com/usereducer-hook-examples/].  
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-# Compoment Tree Sketch Design Notes 
-
-Timers 
-- State Timers = Array Of Timer Objects 
-- Timer values:  unique id, title, project, time elapsed, runningSince 
-- By using a running since, a basic calcuation can allow timers to "run" when app is off 
-
-Timer 
-- Title 
-- Project 
-- Running Timer Display 
-- Delete Timer 
-- Edit Timer Button [Opens Add/Edit Timer Form in place of Timer]
-- Stop/Start Timer Button 
-
-Add Timer Button [Opens Add/Edit Timer in place of + button]
-
-Add/Edit Timer Form 
-- Title Input 
-- Project Input 
-- Add/Update Button 
-- Cancel Button 
