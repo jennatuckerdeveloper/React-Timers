@@ -1,18 +1,11 @@
 {
   "timers": [
     {
-      "title": "i can add a title",
-      "project": "app building ",
-      "id": "ce936a9f-ca3b-4345-a0fa-0fa3e3a0f87c",
-      "elapsed": 442389074132,
-      "runningSince": 1456468632194
-    },
-    {
-      "title": "new timer ",
-      "project": "work timers",
-      "id": "de174572-0521-4971-8835-134fec7ecfea",
-      "elapsed": 294914788943,
-      "runningSince": null
+      "title": "chnaged ",
+      "project": "1 chnage",
+      "elapsed": 0,
+      "runningSince": null,
+      "id": 1
     }
   ]
 }
