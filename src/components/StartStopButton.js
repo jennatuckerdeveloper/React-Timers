@@ -1,28 +1,19 @@
 import React from 'react'
 
-const StartStopButton = ({ runningSince, startTimer, stopTimer }) => {
+const StartStopButton = ({ running, onClick }) => {
 
+  const buttonColor = running ? 'red' : 'green'
+  const buttonText = running ? 'Stop' : 'Start'
   return (
     <div>
-      {!runningSince
-        ? (
-          <div
-            className={'ui attached basic button green'}
-            onClick={startTimer}
-          >
-            Start
-          </div>
-        )
-        : (
-          <div
-            className={'ui attached basic button red'}
-            onClick={stopTimer}
-          >
-            Stop
-          </div>
-        )}
+      <div
+        className={`ui attached basic button ${buttonColor}`}
+        onClick={onClick}
+      >
+        {buttonText}
+      </div>
 
-    </div>
+    </div >
   )
 
 }

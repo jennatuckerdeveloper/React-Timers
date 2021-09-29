@@ -1,7 +1,7 @@
 import React, { useState, useReducer } from 'react'
 import StartStopButton from './StartStopButton'
-import EditTimer from './EditTimer'
 import { renderElapsedString } from '../helpers'
+import TimerForm from './TimerForm'
 
 const Timer = ({ timer, startTimer, stopTimer, updateTimer, deleteTimer }) => {
 
@@ -19,11 +19,17 @@ const Timer = ({ timer, startTimer, stopTimer, updateTimer, deleteTimer }) => {
   }, intitialValue)
   setInterval(dispatch, 50)
 
+  const toggleFormOpen = () => setEditTimerOpen(!editTimerOpen)
+
   return (
     <div className='ui centered card'>
       <div className='content'>
         {editTimerOpen
-          ? <EditTimer timer={timer} updateTimer={updateTimer} closeEditTimer={() => setEditTimerOpen(false)} />
+          ? <TimerForm
+            toggleFormOpen={toggleFormOpen}
+            onFormSubmit={({ title, project }) => updateTimer({ ...timer, title, project })}
+          />
+
           : <div>
             <h3>
               {timer.title}
@@ -47,9 +53,8 @@ const Timer = ({ timer, startTimer, stopTimer, updateTimer, deleteTimer }) => {
               </div>
             </div>
             <StartStopButton
-              runningSince={timer.runningSince}
-              startTimer={() => startTimer(timer)}
-              stopTimer={() => stopTimer(timer)}
+              running={timer.runningSince}
+              onClick={timer.runningSince ? () => stopTimer(timer) : () => startTimer(timer)}
             />
           </div>
         }

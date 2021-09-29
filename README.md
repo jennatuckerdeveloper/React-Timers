@@ -14,4 +14,28 @@
 5) For an excellent explanation of the `userReducer` React hook, see the article `Examples of the useReducer Hook` by Dave Ceddia [https://daveceddia.com/usereducer-hook-examples/].  
 6) Your dev environment should respond to changes to `.eslintrc.json` file.  To check setup, change the `quotes` rule from `single` to `double`.  Restarting the dev server should populate error messages, and `npm run lint` should autofix.  If your dev environment does not respond to changes to this file when you change the file and restart the dev server, troubleshooting advice can be found online for setting up specific IDE's with `eslint`.  
 
+#Component Tree Design Sketch 
+
+Title 
+TimersDashboard
+AllTimers
+
+EditableTimer
+- determines whether to show Timer or update version of Create/Update TimerForm 
+
+Timer
+- title 
+- project
+- display running timer 
+- delete button 
+- edit button 
+- delete button 
+- start / stop timer button 
+
+Hideable Add Timer 
+- determiners whether to display + button or timer form 
+
+Create/Update Timer Form 
+- onclick methods 
+- text Add or Edit
 
