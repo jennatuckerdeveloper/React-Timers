@@ -1,18 +1,18 @@
-import React, { useState } from "react"
+import React, { useState } from 'react'
 
 const EditTimer = ({ timer, updateTimer, closeEditTimer }) => {
 
-  const [title, setTitle] = useState("")
-  const [project, setProject] = useState("")
+  const [title, setTitle] = useState('')
+  const [project, setProject] = useState('')
 
   const onSubmit = (e) => {
 
     e.preventDefault()
-    if (title !== "") {
+    if (title !== '') {
 
       updateTimer({ ...timer, title, project })
-      setTitle("")
-      setProject("")
+      setTitle('')
+      setProject('')
       closeEditTimer()
 
     }
@@ -37,7 +37,7 @@ const EditTimer = ({ timer, updateTimer, closeEditTimer }) => {
           </div>
         </form >
       </div>
-      {" "}
+      {' '}
     </div>
   )
 
