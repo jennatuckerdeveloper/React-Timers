@@ -1,5 +1,5 @@
 import React from 'react'
-import Timer from './Timer'
+import EditableTimer from './EditableTimer'
 
 const AllTimers = ({ timers, startTimer, stopTimer, deleteTimer, updateTimer }) => {
 
@@ -9,7 +9,7 @@ const AllTimers = ({ timers, startTimer, stopTimer, deleteTimer, updateTimer }) 
         timers.map((timer) => {
 
           return (
-            <Timer
+            <EditableTimer
               key={timer.id}
               timer={timer}
               startTimer={startTimer}

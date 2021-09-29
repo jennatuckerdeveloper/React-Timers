@@ -16,12 +16,16 @@
 
 #Component Tree Design Sketch 
 
-Title 
-TimersDashboard
-AllTimers
+App 
+- Title 
+- AllTimers
+- HideableAddTimer 
 
-EditableTimer
-- determines whether to show Timer or update version of Create/Update TimerForm 
+AllTimers
+- Editable Timer components 
+
+Editable Timer
+- determines whether to show Timer or TimerForm 
 
 Timer
 - title 
@@ -33,9 +37,10 @@ Timer
 - start / stop timer button 
 
 Hideable Add Timer 
-- determiners whether to display + button or timer form 
+- determiners whether to display + icon or Timer Form 
 
-Create/Update Timer Form 
+Timer Form
 - onclick methods 
 - text Add or Edit
 
+StartStopButton 
