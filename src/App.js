@@ -18,7 +18,6 @@ const App = () => {
     }
 
     getTimers()
-    // setInterval(getTimers, 5000)
 
   }, [])
 
