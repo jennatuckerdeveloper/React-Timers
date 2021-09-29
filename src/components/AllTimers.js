@@ -1,5 +1,5 @@
-import React from "react"
-import Timer from "./Timer"
+import React from 'react'
+import Timer from './Timer'
 
 const AllTimers = ({ timers, deleteTimer, updateTimer }) => {
 

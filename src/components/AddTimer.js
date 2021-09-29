@@ -1,18 +1,18 @@
-import React, { useState } from "react"
+import React, { useState } from 'react'
 
 const AddTimer = ({ addTimer, toggleNewTimerOpen }) => {
 
-  const [title, setTitle] = useState("")
-  const [project, setProject] = useState("")
+  const [title, setTitle] = useState('')
+  const [project, setProject] = useState('')
 
   const onSubmit = (e) => {
 
     e.preventDefault()
-    if (title !== "") {
+    if (title !== '') {
 
       addTimer({ title, project })
-      setTitle("")
-      setProject("")
+      setTitle('')
+      setProject('')
 
     }
 

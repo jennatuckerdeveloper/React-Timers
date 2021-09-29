@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react"
-import AddTimer from "./components/AddTimer"
-import AllTimers from "./components/AllTimers"
-import NewTimerButton from "./components/NewTimerButton"
+import React, { useState, useEffect } from 'react'
+import AddTimer from './components/AddTimer'
+import AllTimers from './components/AllTimers'
+import NewTimerButton from './components/NewTimerButton'
 
 const App = () => {
 
@@ -23,7 +23,7 @@ const App = () => {
 
   const fetchTimers = async () => {
 
-    const res = await fetch("http://localhost:7000/timers")
+    const res = await fetch('http://localhost:7000/timers')
     const data = await res.json()
     return data
 
@@ -36,10 +36,10 @@ const App = () => {
       elapsed: 0,
       runningSince: null
     }
-    const res = await fetch("http://localhost:7000/timers", {
-      method: "POST",
+    const res = await fetch('http://localhost:7000/timers', {
+      method: 'POST',
       headers: {
-        "Content-type": "application/json"
+        'Content-type': 'application/json'
       },
       body: JSON.stringify(completeNewTimer)
     })
@@ -52,9 +52,9 @@ const App = () => {
   const updateTimer = async (newTimer) => {
 
     const res = await fetch(`http://localhost:7000/timers/${newTimer.id}`, {
-      method: "PUT",
+      method: 'PUT',
       headers: {
-        "Content-type": "application/json"
+        'Content-type': 'application/json'
       },
       body: JSON.stringify(newTimer)
     })
@@ -66,7 +66,7 @@ const App = () => {
   const deleteTimer = async (timerId) => {
 
     await fetch(`http://localhost:7000/timers/${timerId}`, {
-      method: "DELETE"
+      method: 'DELETE'
     })
 
     removeTimerFromState(timerId)
@@ -88,7 +88,7 @@ const App = () => {
   }
 
   return (
-    <div id='main' className='main ui ' style={{ marginTop: "6em" }}>
+    <div id='main' className='main ui ' style={{ marginTop: '6em' }}>
       <h1 className='ui dividing centered header'>Timers</h1>
       <div className='ui column centered grid padded '>
         <div className='column'>
