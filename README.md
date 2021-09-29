@@ -1,7 +1,7 @@
 #Run React Timers App On Local 
 
 1) Clone the Github repo to a local folder. 
-2) From the folder, run `npm install`. 
+2) Move into the created folder of files including `package.json` and run `npm install`. 
 3) In a terminal window run `npm run start` to run the React app in your browser on the local development server at `http://localhost:3000`.
 4) In another terminal window run `npm run server` to run the json-server stand-in REST API. 
 
