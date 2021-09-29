@@ -18,6 +18,7 @@ const App = () => {
     }
 
     getTimers()
+    // setInterval(getTimers, 5000)
 
   }, [])
 
@@ -46,6 +47,24 @@ const App = () => {
     const data = await res.json()
     setTimers([...timers, data])
     toggleNewTimerOpen()
+
+  }
+
+  const startTimer = async (timerToStart) => {
+
+    const now = Date.now()
+    const runningTimer = { ...timerToStart, runningSince: now }
+    await updateTimer(runningTimer)
+
+  }
+
+  const stopTimer = async (timerToStop) => {
+
+    const now = Date.now()
+    const elapsedToAdd = now - timerToStop.runningSince
+    const updatedElapsed = elapsedToAdd + timerToStop.elapsed
+    const stoppedTimer = { ...timerToStop, runningSince: null, elapsed: updatedElapsed }
+    await updateTimer(stoppedTimer)
 
   }
 
@@ -92,7 +111,13 @@ const App = () => {
       <h1 className='ui dividing centered header'>Timers</h1>
       <div className='ui column centered grid padded '>
         <div className='column'>
-          <AllTimers timers={timers} deleteTimer={deleteTimer} updateTimer={updateTimer} />
+          <AllTimers
+            timers={timers}
+            startTimer={startTimer}
+            stopTimer={stopTimer}
+            deleteTimer={deleteTimer}
+            updateTimer={updateTimer}
+          />
 
           {newTimerOpen
             ? <AddTimer addTimer={addTimer} toggleNewTimerOpen={toggleNewTimerOpen} />
