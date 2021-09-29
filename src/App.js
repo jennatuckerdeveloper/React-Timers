@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import AddTimer from './components/AddTimer'
 import AllTimers from './components/AllTimers'
-import NewTimerButton from './components/NewTimerButton'
+import HideableAddTimer from './components/HideableAddTimer'
 
 const App = () => {
 
@@ -117,12 +116,10 @@ const App = () => {
             deleteTimer={deleteTimer}
             updateTimer={updateTimer}
           />
-
-          {newTimerOpen
-            ? <AddTimer addTimer={addTimer} toggleNewTimerOpen={toggleNewTimerOpen} />
-            : <NewTimerButton toggleNewTimerOpen={toggleNewTimerOpen} />
-          }
-
+          <HideableAddTimer
+            newTimerOpen={newTimerOpen}
+            toggleNewTimerOpen={toggleNewTimerOpen}
+            addTimer={addTimer} />
         </div>
       </div >
     </div >
